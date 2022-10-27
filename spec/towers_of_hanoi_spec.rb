@@ -11,7 +11,7 @@ describe TowersOfHanoi do
 
     describe '#move' do
         it 'should take a starting peg, and an ending peg' do
-            expect { tower.move(0,2) }.to_not raise_error(ArgumentError)
+            expect { tower.move(0,2) }.to_not raise_error
         end
         it 'should raise an exception when any of the given pegs are out of bounds' do
             expect { tower.move(4, 6) }.to raise_error(ArgumentError)
