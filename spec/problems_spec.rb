@@ -34,3 +34,26 @@ describe Array do
         end
     end
 end
+
+describe 'my_transpose' do
+    let(:matrix) {[[1,2,3],[4,5,6],[7,8,9]]}
+    let(:transposed) {[[1,4,7],[2,5,8],[3,6,9]]}
+    it 'should correctly transpose the matrix' do
+        expect(my_transpose(matrix)).to eq(transposed)
+    end
+end
+
+describe 'stock_picker' do
+    let(:stocks) {[5,4,3,5,6,7]}
+    it 'should not sell a stock before buying it' do
+        expect(stock_picker(stocks)).to eq([2,5])
+    end
+    it 'should return the most profitable margin' do
+        expect(stock_picker(stocks)).to include(2,5)
+    end
+    it 'should return nil if there is no profitable margin' do
+        downward = [9,7,4,4,3,2,1]
+        expect(stock_picker(downward)).to be(nil)
+    end
+end
+

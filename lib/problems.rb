@@ -8,3 +8,11 @@ class Array
         return [[]]
     end
 end
+
+def my_transpose(arr)
+    return [[]]
+end
+
+def stock_picker(arr)
+
+end
